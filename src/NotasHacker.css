@@ -1,0 +1,204 @@
+body {
+  background-color: #000;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+}
+
+.notas-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+
+.notas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #0f0;
+  background-color: #000;
+  box-shadow: 0 0 20px #0f0;
+}
+
+.titulo-principal {
+  font-size: 1.8rem;
+  color: #00ff66;
+  text-shadow: 0 0 8px #00ff66;
+  margin: 0;
+}
+
+.header-user-info {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #0f0;
+}
+
+.notas-wrapper {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  height: calc(100vh - 90px);
+  box-sizing: border-box;
+}
+
+.notas-col {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.notas-vista {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #00ff66;
+  box-shadow: 0 0 30px #00ff66;
+  border-radius: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.input-hacker,
+.textarea-hacker {
+  background-color: #000;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-family: monospace;
+  box-shadow: 0 0 8px #0f0;
+  width: 100%;
+  border-radius: 8px;
+  resize: none;
+}
+
+.checkbox-hacker {
+  background-color: black;
+  color: #0f0;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-hacker {
+  background-color: #000;
+  border: 2px solid #00ff66;
+  color: #00ff66;
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 0 15px #00ff66;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-hacker:hover {
+  background-color: #002200;
+  transform: scale(1.05);
+}
+
+.nota {
+  background-color: #000;
+  border: 1px solid #0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #0f0;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.nota:hover {
+  background-color: #001100;
+  transform: scale(1.02);
+}
+
+.nota-fecha {
+  font-size: 0.8em;
+  color: #33ff99;
+  margin-top: 5px;
+}
+
+.nota-acciones button {
+  margin-top: 5px;
+  margin-right: 5px;
+  background: #000;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.vista-activa {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  border: 1px solid #0f0;
+  box-shadow: 0 0 20px #0f0;
+  padding: 20px;
+  border-radius: 12px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.vista-activa .textarea-hacker {
+  flex-grow: 1;
+  min-height: 400px;
+  height: 100%;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.titulo-hacker {
+  color: #00ff66;
+  text-shadow: 0 0 8px #00ff66;
+  margin-bottom: 10px;
+}
+
+.no-vista {
+  color: #0f0;
+  font-style: italic;
+}
+
+.importante-alerta {
+  color: #ff3333;
+  font-weight: bold;
+  text-shadow: 0 0 8px #ff3333;
+}
+
+.notas-scroll {
+  max-height: 50vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn-hacker + .btn-hacker {
+  margin-left: 15px;
+}
+
+textarea,
+input {
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+}
