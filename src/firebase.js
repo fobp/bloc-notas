@@ -3,15 +3,7 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, setPersistence, browserSessionPersistence } from "firebase/auth";
 
 // Configuración de tu proyecto Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyBHYulhv4lQCrF6AyR0v0VIvbqcrBlFoIs",
-  authDomain: "notas-44952.firebaseapp.com",
-  projectId: "notas-44952",
-  storageBucket: "notas-44952.firebasestorage.app",
-  messagingSenderId: "609736841793",
-  appId: "1:609736841793:web:c6b28481d7e055505dc4c0",
-  measurementId: "G-J4LS9Q6316"
-};
+
 
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig);
